@@ -1,0 +1,45 @@
+﻿<Window x:Class="VideoPlayerApp.SplashScreen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="Transparent"
+        Width="400" Height="400"
+        WindowStartupLocation="CenterScreen"
+        ShowInTaskbar="False"
+        Topmost="True">
+
+    <Grid Background="White">
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+            <!-- Logo con animación -->
+            <Image Name="LogoImage" Source="/DJSLogo.png" Width="200" Height="200" Opacity="0"/>
+
+            <!-- Texto -->
+            <TextBlock Name="AppName" Text="DJ Isla Player" 
+                       Foreground="Black" 
+                       FontSize="24" 
+                       FontWeight="Bold" 
+                       HorizontalAlignment="Center" 
+                       Margin="0,20,0,0"
+                       Opacity="0"/>
+        </StackPanel>
+    </Grid>
+
+    <!-- Animaciones -->
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="Window.Loaded">
+            <BeginStoryboard>
+                <Storyboard>
+                    <!-- Fade-in del logo -->
+                    <DoubleAnimation Storyboard.TargetName="LogoImage"
+                                     Storyboard.TargetProperty="Opacity"
+                                     From="0" To="1" Duration="0:0:2"/>
+                    <!-- Fade-in del texto -->
+                    <DoubleAnimation Storyboard.TargetName="AppName"
+                                     Storyboard.TargetProperty="Opacity"
+                                     From="0" To="1" Duration="0:0:2" BeginTime="0:0:1"/>
+                </Storyboard>
+            </BeginStoryboard>
+        </EventTrigger>
+    </Window.Triggers>
+</Window>

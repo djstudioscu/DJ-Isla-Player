@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Assets\fullscreen.png" />
+    <None Remove="Assets\pause.png" />
+    <None Remove="Assets\play.png" />
+    <None Remove="Assets\stop.png" />
+    <None Remove="DJSLogo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="LibVLCSharp" Version="3.9.5" />
+    <PackageReference Include="LibVLCSharp.WPF" Version="3.9.5" />
+    <PackageReference Include="VideoLAN.LibVLC.Windows" Version="3.0.21" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\rewind.png" />
+    <Resource Include="Assets\fullscreen.png" />
+    <Resource Include="Assets\pause.png" />
+    <Resource Include="Assets\play.png" />
+    <Resource Include="Assets\forward.png" />
+    <Resource Include="Assets\stop.png" />
+    <Resource Include="Assets\volume.png" />
+    <Resource Include="DJSLogo.png" />
+    <Resource Include="Icon.ico" />
+  </ItemGroup>
+
+</Project>
